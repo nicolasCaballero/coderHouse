@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASE 1 - EJERCITACIONES</title>
+</head>
+
+<body>
+    <H1>NOMBRE: Nicolás Caballero - Email: niicolas.caballero@gmail.com</H1>
+    <script>
+        function User(name, lastName, books, pets) {
+            this.name = name;
+            this.lastName = lastName;
+            this.books = books;
+            this.pets = pets;
+        }
+        User.prototype.getFullName = function () {
+            return `Hello! My name is ${this.name} ${this.lastName}`
+        };
+        User.prototype.addMascota = function (newPet) {
+            this.pets.push(newPet)
+        };
+        User.prototype.getMascotas = function () {
+            return this.pets.length
+        };
+        User.prototype.addBook = function (book, author) {
+            this.books.push({
+                nombre: book,
+                autor: author
+            });
+        };
+        User.prototype.getBooks = function () {
+            let booksNames = [];
+            for (let i = 0; i < this.books.length; i++) {
+                booksNames.push(this.books[i].nombre);
+            };
+            return booksNames;
+        };
+    </script>
+</body>
+
+</html>

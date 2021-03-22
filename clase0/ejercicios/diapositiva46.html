@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Ejercicio 1) */
+        let numero1 = 5;
+        let numero2 = 8;
+
+        numero1 < numero2 ? console.log(`${numero1} no es mayor que ${numero2}`) : false
+        numero2 >= 0 ? console.log(`${numero2} es positivo`) : false
+        numero1 < 0 ? console.log(`${numero1} es negativo o distinto a 0    `) : false
+        if (numero1 + 1 != numero2 || numero1 + 1 > numero2) {
+            console.log(`Incrementar en 1 unidad el valor de ${numero1} no lo hace mayor o igual que ${numero2}`);
+        };
+    </script>
+    <script>
+        /* Ejercicio 2) */
+        let valores = [true, 5, false, 'hola', 'adios', 21];
+    </script>
+    <script>
+        /* Ejercicio 2.a) */
+        let newArr = [];
+        let longer = array => {
+            for (let i = 0; i < array.length; i++) {
+                if (typeof array[i] == 'string') {
+                    newArr.push(array[i]);
+                };
+            };
+            if (newArr[0].length > newArr[1].length) {
+                newArr.pop();
+            } else {
+                newArr.shift()
+            };
+            return newArr;
+        };
+        console.log(`Ejercicio 2.a: El elemento de texto con más caracteres es = '${longer(valores)}'`);
+    </script>
+    <script>
+        /* Ejercicio 2.b) */
+        let findFalse = arr => arr.indexOf(false);
+        console.log(`Ejercicio 2.b: 'false' se encuentra en la posición ${findFalse(valores)} del array`);
+    </script>
+    <script>
+        /* Ejercicio 2.c) */
+        let numericValues = [];
+
+        for (let i = 0; i < valores.length; i++) {
+            if (typeof valores[i] == 'number') {
+                numericValues.push(valores[i]);
+            };
+        };
+
+        let calculator = (numericValues, operation) => {
+            if (operation == 'suma') {
+                return (numericValues[0] + numericValues[1]);
+            } else if (operation == 'resta') {
+                return (numericValues[0] - numericValues[1]);
+            } else if (operation == 'mult') {
+                return (numericValues[0] * numericValues[1]);
+            } else if (operation == 'div') {
+                return (numericValues[0] / numericValues[1]);
+            } else {
+                return (
+                    `${operation} it's not a valid math operation. Try with: 'suma', 'resta', 'mult', or 'div'`);
+            };
+        };
+        console.log(`EJERCICIO 2.C: Suma = ${calculator(numericValues, 'suma')}`);
+        console.log(`EJERCICIO 2.C: Resta = ${calculator(numericValues, 'resta')}`);
+        console.log(`EJERCICIO 2.C: Multiplicación = ${calculator(numericValues, 'mult')}`);
+        console.log(`EJERCICIO 2.C: División = ${calculator(numericValues, 'div')}`);
+        console.log(`EJERCICIO 2.C: Anything = ${calculator(numericValues, 'incorrectValue')}`);
+    </script>
+    <script>
+        /* Ejercicio 3.a) */
+        let object = {
+            'meses': ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre',
+                'Octubre', 'Noviembre', 'Diciembre'
+            ],
+            /* Ejercicio 3.b) */
+            'mostrarMeses': function mostrarMeses(param) {
+                for (let i = 0; i < this.meses.length; i++) {
+                    console.log(`${i + 1}-${this.meses[i]}`);
+                };
+            },
+            'getNumeroMes': function monthNumber(month) {
+                console.log(this.meses.indexOf(month) + 1);
+            },
+            'getLetraMes': function firstLetters(param) {
+                let letters = this.meses.map(first => {
+                    return first[0]
+                });
+                console.log(letters.join(' '));
+            }
+        };
+        console.log('EJERCICIO 3.B: mostrarMeses');
+        object.mostrarMeses();
+        console.log('EJERCICIO 3.C: getNumeroMes. Julio es el més número:');
+        object.getNumeroMes('Julio');
+        console.log('EJERCICIO 3.D:');
+        object.getLetraMes();
+    </script>
+</body>
+
+</html>
