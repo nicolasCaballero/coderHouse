@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O1+nicolasCaballero</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="textField" name="textInput">
+        <span id="mirror"></span>
+    </div>
+    <script type="module">
+        import {
+            fromEvent,
+            Observable
+        } from 'https://dev.jspm.io/rxjs@6/_esm2015';
+
+        let word = '';
+        const $inputText = document.getElementById('textField');
+
+        const keyDown$ = fromEvent($inputText, 'keydown');
+        const subscription = keyDown$.subscribe({
+            next: (e) => {
+
+                if (e.key.length === 1 && (e.key.match(/[a-z]/i) || e.key.match(/^\d+$/)) || e.keyCode ===
+                    32) {
+                    console.log('Key:', e.key);
+                    word += e.key;
+                    if (word.toLowerCase().includes(`error`)) {
+                        subscription.error(`Finalizing Observer due 'error' word typed`);
+                    } else {
+                        if (word.toLowerCase().includes(`complete`)) {
+                            subscription.complete();
+                        };
+                    };
+                    document.getElementById('mirror').innerHTML = word.split('').reverse().join('');
+                };
+
+                setTimeout(() => {
+                    subscription.unsubscribe();
+                    document.getElementById('textField').disable = true;
+                    document.getElementById('mirror').innerHTML = '';
+                    console.log(`Oberver active time has expired`);
+                }, 10000);
+            },
+            error: (err) => {
+                console.log(err);
+            },
+            complete: () => console.log(`Finalizing Observer due 'complete' word typed`)
+        });
+    </script>
+</body>
+
+</html>

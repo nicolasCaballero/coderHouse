@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O2+nicolasCaballero</title>
+</head>
+
+<body>
+    <div>
+        <input id="text" name="textInput" type="text">
+        <span id="mirror"></span>
+    </div>
+    <script type="module">
+        import {
+            fromEvent
+        } from 'https://dev.jspm.io/rxjs@6/_esm2015';
+        import {
+            map,
+            filter
+        } from 'https://dev.jspm.io/rxjs@6/_esm2015/operators';
+
+        let word = '';
+        const inputText = document.getElementById('text');
+
+        const keyDown$ = fromEvent(inputText, 'keydown').pipe(
+            filter((e) => ((e.keyCode <= 90 && e.keyCode >= 48) || e.keyCode === 32)),
+            map(event => {
+                return event.key
+            })
+        ).subscribe((letter) => {
+            word += letter;
+            if (word.toLowerCase().includes(`error`)) {
+                keyDown$.error(`Finalizing Observer due 'error' word typed`);
+            } else {
+                if (word.toLowerCase().includes(`complete`)) {
+                    keyDown$.complete();
+                    console.log(`Oberver active time has expired`)
+                }
+            }
+            document.getElementById('mirror').innerHTML = word.split('').reverse().join('');
+
+            setTimeout(() => {
+                keyDown$.unsubscribe();
+                document.getElementById('text').disable = true;
+                document.getElementById('mirror').innerHTML = '';
+                console.log(`Finalizing Observer due 'complete' word typed`);
+            }, 10000);
+        });
+    </script>
+</body>
+
+</html>
