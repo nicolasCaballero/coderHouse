@@ -7,11 +7,11 @@ let generateRandomNumbers = () => {
     };
 };
 
-generateRandomNumbers()
+generateRandomNumbers();
 
 var objFromArrs = {};
 
-nums.forEach(function(numbers){
+nums.forEach(function (numbers) {
     objFromArrs[numbers] = (objFromArrs[numbers] || 0) + 1;
 });
 

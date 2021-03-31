@@ -29,7 +29,7 @@ let productos = [{
         precio: 78.90
     }
 ];
-
+/* Ejercicio A) */
 let names = [];
 let productsNames = arr => {
     for (let i = 0; i < arr.length; i++) {
@@ -37,4 +37,25 @@ let productsNames = arr => {
     };
     return names.toString()
 };
-sz
+
+/* Ejercicio B) */
+
+let totalPrice = [];
+
+let productPrices = arr => {
+    for (let i = 0; i < arr.length; i++) {       
+        totalPrice.push(arr[i].precio)
+    };
+    return `Summ of products prices: ${totalPrice.reduce((a, b) => a + b, 0).toFixed(2)}`;
+};
+
+/* Ejercicio C) */
+
+let avgPrice = [];
+
+let productPrice = arr => {
+    for (let i = 0; i < arr.length; i++) {       
+        avgPrice.push(arr[i].precio)
+    };
+    return `Average price of all products: ${Math.round(avgPrice.reduce((a, b) => a + b, 0) / avgPrice.length).toFixed(2)}`;
+};
