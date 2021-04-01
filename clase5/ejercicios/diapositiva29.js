@@ -1,4 +1,4 @@
-let productos = [{
+const productos = [{
         id: 1,
         nombre: 'Escuadra',
         precio: 323.45
@@ -29,17 +29,17 @@ let productos = [{
         precio: 78.90
     }
 ];
+
 /* Ejercicio A) */
 let names = [];
 let productsNames = arr => {
     for (let i = 0; i < arr.length; i++) {
         names.push(arr[i].nombre)
     };
-    return names.toString()
+    return `Products Names: ${names.toString()}`;
 };
 
 /* Ejercicio B) */
-
 let totalPrice = [];
 
 let productPrices = arr => {
@@ -50,7 +50,6 @@ let productPrices = arr => {
 };
 
 /* Ejercicio C) */
-
 let avgPrice = [];
 
 let productPrice = arr => {
@@ -59,3 +58,35 @@ let productPrice = arr => {
     };
     return `Average price of all products: ${Math.round(avgPrice.reduce((a, b) => a + b, 0) / avgPrice.length).toFixed(2)}`;
 };
+
+/* Ejercicio D) */
+let minPrice = [];
+
+let minimunPrice = arr => {
+    for (let i = 0; i < arr.length; i++) {       
+        minPrice.push(arr[i].precio)
+    };
+    return `Lowest price of products is: ${Math.min.apply(Math, minPrice)}`;
+};
+
+/* Ejercicio E) */
+let maxPrice = [];
+
+let maximumPrice = arr => {
+    for (let i = 0; i < arr.length; i++) {       
+        maxPrice.push(arr[i].precio)
+    };
+    return `Highest price of products is: ${Math.max.apply(Math, maxPrice)}`;
+};
+
+/* Ejercicio F) */
+const newObj = {
+    id: 1,
+    name: productsNames(productos),
+    totalPrice: productPrices(productos),
+    avgPrice: productPrice(productos),
+    lowestPrice: minimunPrice(productos),
+    highestPrice: maximumPrice(productos)
+};
+
+console.log(newObj);

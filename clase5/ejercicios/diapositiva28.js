@@ -1,4 +1,5 @@
-let nums = new Array(1000);
+/* Ejercicio A) */
+let nums = new Array(10000);
 
 let generateRandomNumbers = () => {
     let i;
@@ -9,7 +10,8 @@ let generateRandomNumbers = () => {
 
 generateRandomNumbers();
 
-var objFromArrs = {};
+/* Ejercicio B) */
+let objFromArrs = {};
 
 nums.forEach(function (numbers) {
     objFromArrs[numbers] = (objFromArrs[numbers] || 0) + 1;
