@@ -1,0 +1,14 @@
+[
+ {
+  "title": "Logitech G Series Lightspeed G703",
+  "price": 7889,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157137-450-450/910-005639-1.png?v=637064255984200000",
+  "id": 1
+ },
+ {
+  "id": 2,
+  "name": "TECLADO MECÁNICO PRO X CLICKY PARA GAMING",
+  "price": 15999,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157519-450-450/920-009229.png?v=637344875559930000"
+ }
+]
