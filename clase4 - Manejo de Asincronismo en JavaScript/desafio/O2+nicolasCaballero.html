@@ -44,7 +44,7 @@
 
             setTimeout(() => {
                 keyDown$.unsubscribe();
-                document.getElementById('text').disable = true;
+                document.getElementById('text').disabled = true;
                 document.getElementById('mirror').innerHTML = '';
                 console.log(`Finalizing Observer due 'complete' word typed`);
             }, 10000);

@@ -42,7 +42,7 @@
 
                 setTimeout(() => {
                     subscription.unsubscribe();
-                    document.getElementById('textField').disable = true;
+                    document.getElementById('textField').disabled = true;
                     document.getElementById('mirror').innerHTML = '';
                     console.log(`Oberver active time has expired`);
                 }, 10000);
