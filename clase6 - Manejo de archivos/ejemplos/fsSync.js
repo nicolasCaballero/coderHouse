@@ -2,7 +2,7 @@ import fs from 'fs'
 let path = 'syncFile.txt'
 let syncFile = `hello`;
 
-fs.writeFileSync(path, syncFile, error => {
+fs.writeFile(path, syncFile, error => {
     if (error) {
         console.log(`Oops! Couldn't rewrite file`);
     } else {
