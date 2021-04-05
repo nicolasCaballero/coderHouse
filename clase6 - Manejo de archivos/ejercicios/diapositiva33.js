@@ -6,7 +6,7 @@ const fileSize = stats.size;
 /* Ejercicio A) */
 fs.readFile('../package.json', 'utf-8', (err, cont) => {
     if (err) {
-        console.log(`Opps! File not found.`);
+        console.log(`Oops! File not found.`);
     } else {
         const info = {
             contenidoStr: JSON.stringify(JSON.parse(cont)),
@@ -18,7 +18,7 @@ fs.readFile('../package.json', 'utf-8', (err, cont) => {
             if (error) {
                 console.log(`Oops! Couldn't rewrite file`);
             } else {
-                console.log(`Sync File succesfully created!`);
+                console.log(`Sync File successfully created!`);
             };
         });
         /* Ejercicio B) */

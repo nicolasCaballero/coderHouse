@@ -11,13 +11,13 @@ fs.promises.readFile('../info.txt', 'utf-8')
         async function writeFile() {
             try {
                 fs.promises.writeFile('../package.json.coder', JSON.stringify(info.contenidoObj, null, '\t'));
-                console.log(`File succesfully writen!`);
+                console.log(`File successfully written!`);
             } catch (error) {
-                console.log(`Oops! Coudn't write file!`, error)
+                console.log(`Oops! couldn't write file!`, error)
             };
         };
         writeFile();
     })
     .catch(err => {
-        console.log(`Oops! Coudn't read file!`, err);
+        console.log(`Oops! couldn't read file!`, err);
     });

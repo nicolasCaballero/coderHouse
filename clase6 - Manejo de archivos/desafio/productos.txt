@@ -1,9 +1,9 @@
 [
  {
+  "id": 1,
   "title": "Logitech G Series Lightspeed G703",
   "price": 7889,
-  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157137-450-450/910-005639-1.png?v=637064255984200000",
-  "id": 1
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157137-450-450/910-005639-1.png?v=637064255984200000"
  },
  {
   "id": 2,
