@@ -11,7 +11,7 @@ fs.promises.readFile('../info.txt', 'utf-8')
         async function writeFile() {
             try {
                 fs.promises.writeFile('../package.json.coder', JSON.stringify(info.contenidoObj, null, '\t'));
-                console.log(`File successfully written!`);
+                console.log(`File successfully written and author modified!`, info);
             } catch (error) {
                 console.log(`Oops! couldn't write file!`, error)
             };
