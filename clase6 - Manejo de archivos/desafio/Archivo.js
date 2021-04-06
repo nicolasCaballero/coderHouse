@@ -22,17 +22,24 @@ class Archivo {
                     name: title,
                     price: price,
                     thumbnail: thumbnail
-                }
+                };
+
                 checkIfFileExists.push(newProduct);
                 await fs.promises.writeFile('./productos.txt', JSON.stringify(checkIfFileExists, null, 1));
-                console.log(`Product: ${newProduct.name} successfully added!`)
-            } else {
-                await fs.promises.writeFile('./productos.txt', JSON.stringify(newProduct, null, 1));
-                console.log(`Successfully created the file "productos.txt" and added the new product!`);
-            }
+                console.log(`Product: ${newProduct.name} successfully added!`);
+            };
         } catch (err) {
-            console.log(`Oops! couldn't write file!`, err)
-        }
+
+            let newFile = [{
+                id: 1,
+                name: title,
+                price: price,
+                thumbnail: thumbnail
+            }];
+
+            await fs.promises.writeFile('./productos.txt', JSON.stringify(newFile, null, 1));
+            console.log(`Successfully created the file "productos.txt" and added the new product!`);
+        };
     };
     async delete() {
         fs.unlink(`./productos.txt`, err => {
