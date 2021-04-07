@@ -14,31 +14,35 @@ class Archivo {
     };
     async save(title, price, thumbnail) {
         try {
-            let checkIfFileExists = JSON.parse(await this.read());
-            if (checkIfFileExists) {
+            let checkIfFileExists = await this.read();
+            if (typeof checkIfFileExists == 'string') {
+
+                let parsedJSON = JSON.parse(checkIfFileExists);
 
                 let newProduct = {
-                    id: checkIfFileExists.length + 1,
+                    id: parsedJSON.length + 1,
                     name: title,
                     price: price,
                     thumbnail: thumbnail
                 };
 
-                checkIfFileExists.push(newProduct);
-                await fs.promises.writeFile('./productos.txt', JSON.stringify(checkIfFileExists, null, 1));
+                parsedJSON.push(newProduct);
+                await fs.promises.writeFile('./productos.txt', JSON.stringify(parsedJSON, null, 1));
                 console.log(`Product: ${newProduct.name} successfully added!`);
+            } else {
+
+                let newFile = [{
+                    id: 1,
+                    name: title,
+                    price: price,
+                    thumbnail: thumbnail
+                }];
+
+                await fs.promises.writeFile('./productos.txt', JSON.stringify(newFile, null, 1));
+                console.log(`Successfully created the file "productos.txt" and added the product: ${newFile[0].name}`);
             };
         } catch (err) {
-
-            let newFile = [{
-                id: 1,
-                name: title,
-                price: price,
-                thumbnail: thumbnail
-            }];
-
-            await fs.promises.writeFile('./productos.txt', JSON.stringify(newFile, null, 1));
-            console.log(`Successfully created the file "productos.txt" and added the new product!`);
+            console.log(err);
         };
     };
     async delete() {
