@@ -1,11 +1,12 @@
-[{
+[
+    {
         "id": 1,
         "title": "Logitech G Series Lightspeed G703",
         "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157137-450-450/910-005639-1.png?v=637064255984200000"
     },
     {
         "id": 2,
-        "name": "TECLADO MECÁNICO PRO X CLICKY PARA GAMING",
+        "title": "TECLADO MECÁNICO PRO X CLICKY PARA GAMING",
         "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157519-450-450/920-009229.png?v=637344875559930000"
     }
 ]

@@ -4,7 +4,7 @@ class Productos {
     constructor(name) {
         this.name = name;
     };
-    read() {
+    get() {
         try {
             const cont = fs.readFileSync('./productos.json', 'utf-8');
             return cont
@@ -12,48 +12,38 @@ class Productos {
             return [];
         };
     };
-    /*     async save(title, price, thumbnail) {
-            try {
-                let checkIfFileExists = await this.read();
-                if (typeof checkIfFileExists == 'string') {
+    post(title, price, thumbnail) {
+        try {
+            let checkIfFileExists = this.get();
+            if (typeof checkIfFileExists == 'string') {
 
-                    let parsedJSON = JSON.parse(checkIfFileExists);
+                let parsedJSON = JSON.parse(checkIfFileExists);
 
-                    let newProduct = {
-                        id: parsedJSON.length + 1,
-                        name: title,
-                        price: price,
-                        thumbnail: thumbnail
-                    };
-
-                    parsedJSON.push(newProduct);
-                    await fs.promises.writeFile('./productos.txt', JSON.stringify(parsedJSON, null, 1));
-                    console.log(`Product: ${newProduct.name} successfully added!`);
-                } else {
-
-                    let newFile = [{
-                        id: 1,
-                        name: title,
-                        price: price,
-                        thumbnail: thumbnail
-                    }];
-
-                    await fs.promises.writeFile('./productos.txt', JSON.stringify(newFile, null, 1));
-                    console.log(`Successfully created the file "productos.txt" and added the product: ${newFile[0].name}`);
+                let newProduct = {
+                    id: parsedJSON.length + 1,
+                    price: price,
+                    title: title,
+                    thumbnail: thumbnail
                 };
-            } catch (err) {
-                console.log(err);
+
+                parsedJSON.push(newProduct);
+                fs.writeFileSync('./productos.json', JSON.stringify(parsedJSON, null, 1));
+                console.log(`Product: ${newProduct.title} successfully added!`);
+            } else {
+
+                let newFile = [{
+                    id: 1,
+                    price: price,
+                    title: title,
+                    thumbnail: thumbnail
+                }];
+
+                fs.writeFileSync('./productos.json', JSON.stringify(newFile, null, 1));
+                console.log(`Successfully created the file "productos.json" and added the product: ${newFile[0].title}`);
             };
+        } catch (err) {
+            console.log(err);
         };
-        async delete() {
-            fs.unlink(`./productos.txt`, err => {
-                if (err) {
-                    console.log(`Oops! Couldn't delete file because it doesn't exists!`);
-                } else {
-                    console.log(`productos.txt successfully deleted!`);
-                };
-            });
-        } */
-
+    };
 };
 module.exports = Productos;
