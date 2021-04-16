@@ -18,14 +18,12 @@ class Productos {
             if (typeof checkIfFileExists == 'string') {
 
                 let parsedJSON = JSON.parse(checkIfFileExists);
-
                 let newProduct = {
                     id: parsedJSON.length + 1,
-                    price: price,
                     title: title,
+                    price: price,
                     thumbnail: thumbnail
                 };
-
                 parsedJSON.push(newProduct);
                 fs.writeFileSync('./productos.json', JSON.stringify(parsedJSON, null, 1));
                 console.log(`Product: ${newProduct.title} successfully added!`);
@@ -33,8 +31,8 @@ class Productos {
 
                 let newFile = [{
                     id: 1,
-                    price: price,
                     title: title,
+                    price: price,
                     thumbnail: thumbnail
                 }];
 

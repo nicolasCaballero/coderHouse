@@ -1,12 +1,8 @@
 [
-    {
-        "id": 1,
-        "title": "Logitech G Series Lightspeed G703",
-        "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157137-450-450/910-005639-1.png?v=637064255984200000"
-    },
-    {
-        "id": 2,
-        "title": "TECLADO MECÁNICO PRO X CLICKY PARA GAMING",
-        "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157519-450-450/920-009229.png?v=637344875559930000"
-    }
+ {
+  "id": 1,
+  "title": "AURICULARES G PRO GAMING",
+  "price": 14999,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157445-450-450/GPROX1.png?v=637312224841270000"
+ }
 ]

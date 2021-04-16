@@ -30,9 +30,11 @@ router.get('/productos/:id', (req, res) => {
 
 // EJERCICIO C)
 router.post('/productos', (req, res) => {
-    let data = req.body
-    let postProduct = newProduct.post(data)
-    res.json(postProduct);
+    let title = req.body.title;
+    let price = req.body.price;
+    let thumbnail = req.body.thumbnail;
+    let postProduct = newProduct.post(title, price, thumbnail);
+    res.send(`Product '${title}' successfully added!`)
 });
 
 module.exports = router;
