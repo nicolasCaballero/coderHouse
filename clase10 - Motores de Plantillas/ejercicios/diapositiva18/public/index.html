@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script src='https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js'></script>
+    <div>
+        <h1>Personal Data</h1>
+        <ul id='datos'></ul>
+    </div>
+    <script>
+        const template = Handlebars.compile(`
+        <li>{{name}}</li>
+        <li>{{lastName}}</li>
+        <li>{{age}}</li>
+        <li>{{email}}</li>
+        <li>{{phone}}</li>`);
+    
+        const HTML = template({
+            name: 'Nicolas',
+            lastName: 'Caballero',
+            age: 28,
+            email: 'email@email.com',
+            phone: 1234567890,
+        });
+        document.querySelector('#datos').innerHTML = HTML;
+    </script>
+</body>
+
+</html>
