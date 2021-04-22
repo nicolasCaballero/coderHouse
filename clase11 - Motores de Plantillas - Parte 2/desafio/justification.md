@@ -1,0 +1,2 @@
+# Justificación de por que usaría EJS
+Debido a la uniformidad en la lógica de su utilización. Al ser html, sin ninguna compleja estructura de como se escribe el lenguaje, se me hace no solo mas simple para la  implementación, sino que también para la lectura del código y su fácil escalado.
