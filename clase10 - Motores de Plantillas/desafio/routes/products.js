@@ -37,7 +37,7 @@ router.post('/productos', (req, res) => {
     let price = req.body.price;
     let thumbnail = req.body.thumbnail;
     let postProduct = newProduct.post(title, price, thumbnail);
-    res.send(`Product '${title}' successfully added!`)
+    res.redirect('http://localhost:3434/productos/vista')
 });
 
 router.put('/productos/:id', (req, res) => {
