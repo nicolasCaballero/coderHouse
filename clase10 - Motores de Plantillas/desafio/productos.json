@@ -1,0 +1,32 @@
+[
+ {
+  "id": 1,
+  "title": "Logitech G Pro X Gaming",
+  "price": 19999,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157445-450-450/GPROX1.png?v=637312224841270000"
+ },
+ {
+  "id": 2,
+  "title": "Logitech Mecanico Pro X Clicky",
+  "price": 15999,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157445-450-450/GPROX1.png?v=637312224841270000"
+ },
+ {
+  "id": 3,
+  "title": "Logitech Gaming G703 Lightspeed Wireless",
+  "price": 10400,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157445-450-450/GPROX1.png?v=637312224841270000"
+ },
+ {
+  "id": 4,
+  "title": "Volante G29 Driving Force",
+  "price": 47549,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157445-450-450/GPROX1.png?v=637312224841270000"
+ },
+ {
+  "id": 5,
+  "title": "Mousepad de Tela Rigida G440",
+  "price": "2239",
+  "thumbnail": "https://www.logitechstore.com.ar/mousepad-de-tela-rigida-para-juegos-g440/p"
+ }
+]

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <h1 class="p-3 mb-2 bg-dark text-white text-center border border-white shadow p-3 mb-5 rounded">EJERCITACION
+        DIAPOSITIVA 37</h1>
+    <span class="fs-2">Crear una producto</span>
+    <form action="/datos" method="POST">
+        <div class="mb-3 mt-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input required type="text" class="form-control" id="name" name="name" placeholder="Ej: Nicolas">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Apellido</label>
+            <input required type="text" class="form-control" id="lastName" name="lastName"
+                placeholder="Ej: Caballero">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">edad</label>
+            <input required type="text" class="form-control" id="age" name="age" placeholder="Ej: 27">
+        </div>
+        <button type="submit" class="btn btn-dark border border-white shadow rounded">CREAR</button>
+    </form>
+    <br>
+    <br>
+    <% if (personas.length > 0) { %>
+    <h2 style="color: brown;">HISTORIAL</h2>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for( let i = 0; i < personas.length; i++ ) { %>
+            <tr>
+                <th scope="row"><%= personas[i].id %></th>
+                <td><%= personas[i].name %></td>
+                <td><%= personas[i].lastName %></td>
+                <td><%= personas[i].age %></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <% } else { %>
+        <h2 style="color: brown;">HISTORIAL</h2>
+        <p class="alert alert-danger">No se encontraron datos</p>
+    <% } %>
+    <%- include('./partials/footer') %>
+</body>
+
+</html>

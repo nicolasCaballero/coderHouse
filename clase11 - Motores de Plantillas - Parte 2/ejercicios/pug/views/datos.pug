@@ -1,0 +1,9 @@
+html
+    head
+        title= 'Datos'
+    body 
+        h1(style= "color:blue:" )!= params.titulo
+        div
+            span= params.min
+            meter(min= params.min max= params.max value= params.nivel) 
+            span= params.max
