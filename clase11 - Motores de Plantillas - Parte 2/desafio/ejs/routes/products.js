@@ -3,8 +3,6 @@ const router = express.Router();
 const Products = require('../Productos');
 const newProduct = new Products(`productos.json`);
 const getProducts = newProduct.get();
-const handlebars = require('express-handlebars');
-
 
 router.get('/productos', (req, res) => {
     if (typeof getProducts == 'string') {
@@ -20,11 +18,13 @@ router.get('/productos/:id', (req, res) => {
     if (typeof getProducts == 'string') {
         let products = JSON.parse(getProducts);
         let productId = req.params.id;
+        let product = [];
         for (let i = 0; i < products.length; i++) {
             if (products[i].id == productId) {
-                res.status(200).json(products[i]);
+                product.push(products[i]);
             };
         };
+        res.render('../views/productDetail', {product: product});
     } else {
         res.status(404).json({
             error: 'no hay productos cargados'
@@ -45,10 +45,10 @@ router.put('/productos/:id', (req, res) => {
     let price = req.body.price;
     let thumbnail = req.body.thumbnail;
     let productToUpdate = newProduct.put(parseInt(req.params.id), title, price, thumbnail);
-    res.send(`Product '${title}' successfully updated!`)
+    res.redirect('http://localhost:3434/productos/vista')
 });
-router.delete('/productos/:id', (req, res) => {
+router.get('/productos/delete/:id', (req, res) => {
     let productToDelete = newProduct.delete(parseInt(req.params.id));
-    res.send(`Product '${req.params.id}' successfully deleted!`);
+    res.redirect('http://localhost:3434/productos/vista');
 });
 module.exports = router;
