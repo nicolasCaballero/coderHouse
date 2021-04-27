@@ -1,0 +1,12 @@
+<p class="text-center">©nicolasCaballero 2021</p>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io.connect();
+    const input = document.querySelector('input');
+    input.addEventListener('input', () => {
+        socket.emit('mensaje', input.value)
+    });
+    socket.on('mensajes', data => {
+        document.querySelector('p').innerText = data
+    });
+</script>
