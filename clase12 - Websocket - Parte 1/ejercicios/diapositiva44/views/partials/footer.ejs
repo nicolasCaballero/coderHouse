@@ -1,12 +1,15 @@
 <p class="text-center">©nicolasCaballero 2021</p>
-<script src="/socket.io/socket.io.js"></script>
 <script>
-    const socket = io.connect();
-    const input = document.querySelector('input');
-    input.addEventListener('input', () => {
-        socket.emit('mensaje', input.value)
-    });
-    socket.on('mensajes', data => {
-        document.querySelector('p').innerText = data
-    });
+
+const socket = io.connect();
+const input = document.querySelector('input')
+document.querySelector('button').addEventListener('click', () => {
+    socket.emit('mensaje', input.value);
+});
+socket.on('mensajes', msjs => {
+    const mensajesHTML = msjs
+        .map(msj => `SocketId: ${msj.socketid} -> Mensaje: ${msj.mensaje}`)
+        .join('<br>')
+    document.querySelector('p').innerHTML = mensajesHTML
+});
 </script>
