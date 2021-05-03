@@ -21,7 +21,7 @@ server.listen(8080, () => {
 io.on('connection', socket => {
     console.log(`CLIENT:${socket.id} is online`)
     socket.emit('products', JSON.parse(getProducts));
-    io.sockets.emit('products', getProducts);
+    io.sockets.emit('products', JSON.parse(getProducts));
 });
 
 app.get('/productos/vista', (req, res) => {
