@@ -1,0 +1,38 @@
+[
+ {
+  "id": 2,
+  "title": "Teclado Logitech Mecanico Pro X Clicky",
+  "price": 15999,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157519-450-450/920-009229.png?v=637344875559930000"
+ },
+ {
+  "id": 3,
+  "title": "Mouse Logitech Gaming G703 Lightspeed Wireless",
+  "price": 10400,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157153-450-450/910-005639-2.png?v=637064257500570000"
+ },
+ {
+  "id": 4,
+  "title": "Volante G29 Driving Force",
+  "price": 47549,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/156583-450-450/941-000111_1.png?v=636973475815370000"
+ },
+ {
+  "id": 5,
+  "title": "Mousepad de Tela Rigida G440",
+  "price": "2239",
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/156580-450-450/943-000098_2.png?v=636973475771230000"
+ },
+ {
+  "id": 1,
+  "title": "Auriculares Logitech G Pro X Gaming",
+  "price": "19999",
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157445-450-450/GPROX1.png?v=637312224841270000"
+ },
+ {
+  "id": 6,
+  "title": "Samsung Gaming 24\" C24RG50",
+  "price": "53176",
+  "thumbnail": "https://images.samsung.com/is/image/samsung/ar-c24rg5-lc24rg50fqlxzb-frontblack-171741155?$684_547_PNG$"
+ }
+]
