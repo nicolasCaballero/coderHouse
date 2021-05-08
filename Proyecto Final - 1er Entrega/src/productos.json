@@ -1,0 +1,72 @@
+[
+ {
+  "id": 1,
+  "sku": "LGMMGLW",
+  "timestamp": "2021-05-08T16:25:56.443Z",
+  "title": "Mouse Logitech Gaming G703 Lightspeed Wireless",
+  "price": 10400,
+  "qty": 10,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157153-450-450/910-005639-2.png?v=637064257500570000",
+  "description": "El mouse G703 tiene un diseño ergonómico pensado para el confort e incluye tecnologías avanzadas, como la ultrarrápida inalámbrica LIGHTSPEED. Funciona con el sistema inalámbrico de carga POWERPLAY para permitir el proceso de carga ininterrumpido durante el uso del mouse."
+ },
+ {
+  "id": 2,
+  "sku": "LGVGDF",
+  "timestamp": "2021-05-08T16:27:56.443Z",
+  "title": "Volante G29 Driving Force",
+  "price": 47549,
+  "qty": 10,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/156583-450-450/941-000111_1.png?v=636973475815370000",
+  "description": "Driving Force es el volante de simulación de carreras definitivo para los juegos de carreras de PlayStation®4, PlayStation®3 y PC más recientes."
+ },
+ {
+  "id": 35,
+  "sku": "LGMTRG",
+  "timestamp": "2021-05-08T16:31:56.443Z",
+  "title": "Mousepad de Tela Rigida G440",
+  "price": 2239,
+  "qty": 10,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/156580-450-450/943-000098_2.png?v=636973475771230000",
+  "description": "Logitech® G440 Hard Gaming Mouse Pad tiene una superficie de baja fricción de polímero rígido que mejora el control del ratón y la ubicación precisa del cursor, ideal para juegos con valores altos de dpi."
+ },
+ {
+  "id": 4,
+  "sku": "LGALGPXG",
+  "timestamp": "2021-05-08T16:42:56.443Z",
+  "title": "Auriculares Logitech G Pro X Gaming",
+  "price": 19999,
+  "qty": 10,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157445-450-450/GPROX1.png?v=637312224841270000",
+  "description": "Diseñados para jugadores profesionales. Con todo lo necesario y nada superfluo. UNA MISIÓN - JUGAR PARA GANAR"
+ },
+ {
+  "id": 5,
+  "sku": "kvxd",
+  "timestamp": "2021-05-08T16:45:56.443Z",
+  "title": "Kolink Void X Dual",
+  "price": 10800,
+  "qty": 10,
+  "description": "La Void X tiene un llamativo panel frontal, con un par de paneles triangulares ARGB de espejo infinito, acentuados por un par de tiras de LED ARGB, lo que resulta en una caja estéticamente agradable. La Void X también tiene un impresionante soporte de hardware, incluyendo soporte de radiador dual, soporte de GPU vertical, soporte de placa base E-ATX y mucho más.",
+  "thumbnail": "https://kolink.eu/____impro/1/onewebmedia/Cases/VOID%20X/Optimerade%20bilder/GEKL_083_01-opti.jpg?etag=%22147e5-60621635%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=425%2B425&quality=85"
+ },
+ {
+  "id": 6,
+  "sku": "LGMPXC",
+  "timestamp": "2021-05-08T16:58:45.699Z",
+  "title": "Teclado Logitech Mecanico Pro X Clicky",
+  "price": 15999,
+  "qty": 10,
+  "description": "Diseñado en colaboración con profesionales de los deportes electrónicos para los más altos niveles de rendimiento, diseño compacto y elección de usuario intercambiable",
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157519-450-450/920-009229.png?v=637344875559930000"
+ },
+ {
+  "id": 7,
+  "sku": "SMG2C2",
+  "timestamp": "2021-05-08T17:11:06.861Z",
+  "title": "Monitor Gaming 24\" C24RG50",
+  "price": 54900,
+  "qty": 10,
+  "thumbnail": "https://images.samsung.com/is/image/samsung/ar-c24rg5-lc24rg50fqlxzb-frontblack-171741155?$684_547_PNG$",
+  "description": "La acción se ve nítida y fluida en todo momento. Su tasa de refresco de 144 Hz te permite jugar con ventaja incluso en las partidas más exigentes. Encontrá al enemigo al instante y percibí los pequeños cambios que marcan la diferencia. La tasa de refresco puede cambiarse fácilmente a 60 Hz, 100 Hz o 120 Hz."
+ }
+]

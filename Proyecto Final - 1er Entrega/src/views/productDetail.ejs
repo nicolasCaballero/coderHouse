@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<%- include('./partials/header')  %>
+
+<body class="p-3 mb-2">
+    <div class="container">
+        <span class="fs-2">Editar producto <%= product[0].title%> </span>
+        <form action="/api/productos/<%=product[0].id%>?_method=PUT" method="POST">
+            <div class="mb-3 mt-3">
+                <label for="id" class="form-label">Id</label>
+                <input  type="text" class="form-control" id="id" name="id" value='<%= product[0].id%>' >
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="sku" class="form-label">Sku</label>
+                <input  type="text" class="form-control" id="sku" name="sku" value='<%= product[0].sku%>'
+                    >
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="timestamp" class="form-label">Fecha de creacion</label>
+                <input  type="text" class="form-control" id="timestamp" name="timestamp"
+                    value='<%= product[0].timestamp%>' >
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="title" class="form-label">Titulo</label>
+                <input  type="text" class="form-control" id="title" name="title" value='<%= product[0].title%>'>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Precio</label>
+                <input  type="number" class="form-control" id="price" name="price"
+                    value='<%= product[0].price%>'>
+            </div>
+            <div class="mb-3">
+                <label for="qty" class="form-label">Stock</label>
+                <input  type="number" class="form-control" id="qty" name="qty" value='<%= product[0].qty%>'>
+            </div>
+            <div class="mb-3">
+                <p>Imagen</p>
+                <img width="200" height="200" class="img-thumbnail" src="<%= product[0].thumbnail%>" alt=""> <br>
+                <label for="thumbnail" class="form-label">URL Imagen</label>
+                <input  type="text" class="form-control" id="thumbnail" name="thumbnail"
+                    value='<%= product[0].thumbnail%>'>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="description" class="form-label">Descripcion</label>
+                <input  type="text" class="form-control" id="description" name="description"
+                    value='<%= product[0].description%>'>
+            </div>
+            <button type="submit" class="btn btn-dark border border-white shadow rounded">ACTUALIZAR</button>
+        </form>
+    </div>
+    <hr>
+    <div class="container">
+        <a href="/">
+            <button class="btn btn-dark border border-white shadow rounded">VOLVER</button>
+        </a>
+    </div>
+</body>
+
+</html>
