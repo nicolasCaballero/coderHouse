@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="http://simpleicon.com/wp-content/uploads/Code-Optimization-2.png">
+        <link rel="stylesheet" href="/footer.css">
+        <title>Proyecto Final</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    </head>
+<body class="p-3 mb-2">
+    <%- include('./partials/header')  %>
+    <div class="container">
+        <span class="fs-2">Editar producto <%= product[0].title%> </span>
+        <form action="/productos/edit/<%=product[0].id%>?_method=PUT" method="POST">
+            <div class="mb-3 mt-3">
+                <label for="id" class="form-label">ID</label>
+                <input  type="text" class="form-control border-info rounded-pill" id="id" name="id" value='<%= product[0].id%>' >
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="sku" class="form-label">SKU</label>
+                <input  type="text" class="form-control border-info rounded-pill" id="sku" name="sku" value='<%= product[0].sku%>'
+                    >
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="timestamp" class="form-label">FECHA DE CREACION</label>
+                <input  type="text" class="form-control border-info rounded-pill" id="timestamp" name="timestamp"
+                    value='<%= product[0].timestamp%>' >
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="title" class="form-label">TITULO</label>
+                <input  type="text" class="form-control border-info rounded-pill" id="title" name="title" value='<%= product[0].title%>'>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">PRECIO</label>
+                <input  type="number" class="form-control border-info rounded-pill" id="price" name="price"
+                    value='<%= product[0].price%>'>
+            </div>
+            <div class="mb-3">
+                <label for="qty" class="form-label">STOCK</label>
+                <input  type="number" class="form-control border-info rounded-pill" id="qty" name="qty" value='<%= product[0].qty%>'>
+            </div>
+            <div class="mb-3">
+                <p>IMAGEN</p>
+                <img width="200" height="200" class="img-thumbnail border-info rounded-pill" src="<%= product[0].thumbnail%>" alt=""> <br>
+                <label for="thumbnail" class="form-label">URL Imagen</label>
+                <input  type="text" class="form-control border-info rounded-pill" id="thumbnail" name="thumbnail"
+                    value='<%= product[0].thumbnail%>'>
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="description" class="form-label">DESCRIPCION</label>
+                <input  type="text" class="form-control border-info rounded-pill" id="description" name="description"
+                    value='<%= product[0].description%>'>
+            </div>
+            <button type="submit" class="text-secondary btn bg-info bg-gradient rounded-pill mb-3">ACTUALIZAR</button>
+        </form>
+    </div>
+    <hr>
+    <div class="container">
+        <a href="/">
+            <button class="text-secondary btn bg-info bg-gradient rounded-pill mb-3">VOLVER</button>
+        </a>
+    </div>
+</body>
+
+</html>

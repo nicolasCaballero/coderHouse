@@ -25,8 +25,8 @@ class Productos {
                     title: title,
                     price: price,
                     qty: qty,
-                    description: description,
-                    thumbnail: thumbnail
+                    thumbnail: thumbnail,
+                    description: description
                 };
                 parsedJSON.push(newProduct);
                 fs.writeFileSync('./productos.json', JSON.stringify(parsedJSON, null, 1));

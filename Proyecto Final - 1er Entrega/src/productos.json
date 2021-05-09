@@ -10,17 +10,7 @@
   "description": "El mouse G703 tiene un diseño ergonómico pensado para el confort e incluye tecnologías avanzadas, como la ultrarrápida inalámbrica LIGHTSPEED. Funciona con el sistema inalámbrico de carga POWERPLAY para permitir el proceso de carga ininterrumpido durante el uso del mouse."
  },
  {
-  "id": 2,
-  "sku": "LGVGDF",
-  "timestamp": "2021-05-08T16:27:56.443Z",
-  "title": "Volante G29 Driving Force",
-  "price": 47549,
-  "qty": 10,
-  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/156583-450-450/941-000111_1.png?v=636973475815370000",
-  "description": "Driving Force es el volante de simulación de carreras definitivo para los juegos de carreras de PlayStation®4, PlayStation®3 y PC más recientes."
- },
- {
-  "id": 35,
+  "id": 3,
   "sku": "LGMTRG",
   "timestamp": "2021-05-08T16:31:56.443Z",
   "title": "Mousepad de Tela Rigida G440",
@@ -68,5 +58,25 @@
   "qty": 10,
   "thumbnail": "https://images.samsung.com/is/image/samsung/ar-c24rg5-lc24rg50fqlxzb-frontblack-171741155?$684_547_PNG$",
   "description": "La acción se ve nítida y fluida en todo momento. Su tasa de refresco de 144 Hz te permite jugar con ventaja incluso en las partidas más exigentes. Encontrá al enemigo al instante y percibí los pequeños cambios que marcan la diferencia. La tasa de refresco puede cambiarse fácilmente a 60 Hz, 100 Hz o 120 Hz."
+ },
+ {
+  "id": 2,
+  "sku": "LGVGDF",
+  "timestamp": "2021-05-08T16:27:56.443Z",
+  "title": "Volante G29 Driving Force",
+  "price": 47549,
+  "qty": 10,
+  "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/156583-450-450/941-000111_1.png?v=636973475815370000",
+  "description": "Driving Force es el volante de simulación de carreras definitivo para los juegos de carreras de PlayStation®4, PlayStation®3 y PC más recientes."
+ },
+ {
+  "id": 8,
+  "sku": "MAXT",
+  "timestamp": "2021-05-09T00:46:48.504Z",
+  "title": "Asrock X570 Taichi Am4 Pcie Gen4 Dual Hyper M.2 Rgb",
+  "price": 33400,
+  "qty": 5,
+  "description": "Mad x570 supports AMD AM4 socket // un-buffered memory AMD Ryzen series CPUs (Picasso) support DDR4 3466+(OC)/ 3200(OC)/ 2933/ 2667/ 2400/ 2133 non-ECC, un-buffered memory // AS Rock X570 // Phantom gaming-tix/TB3 Mini ITX",
+  "thumbnail": "https://m.media-amazon.com/images/I/719WTOWWZBL._AC_UY218_.jpg"
  }
 ]
