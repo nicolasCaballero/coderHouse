@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="http://simpleicon.com/wp-content/uploads/Code-Optimization-2.png">
+        <link rel="stylesheet" href="/productDetail.css">
+        <link rel="stylesheet" href="/footer.css">
+        <title>Proyecto Final</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+      </head>
+<body>
+<%- include('./partials/header')  %>
+
+<% if (cart.length != 0) { %>
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-3">
+            <h2>Tu Carrito</h2>
+            <section class="col-12 text-center">
+                <div class="row justify-content-center" id="productosCarrito">
+                    <div class="col-xl-5 col-lg-5 col-md-11 col-sm-11 col-xs-11 mx-1">
+                    <% for( let i = 0; i < cart.length; i++ ) { %>
+                        <% for( let j = 0; j < cart[i].productos.length; j++ ) { %>
+                            <article class="mb-3">
+                                <div class="mx-1 row border rounded-sm shadow-sm">
+                                    <div class="col-4">
+                                        <a href="/detalle/<%= cart[i].productos[j].sku %>"><img class="mr-2 mt-4 rounded d-block" src="<%= cart[i].productos[j].thumbnail %> " width="145px" alt="<%= cart[i].productos[j].title %>"></a>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="card-body ml-2">
+                                            <h5 id="titulo-producto" class="card-title py-2 pl-2"><strong><%= cart[i].productos[j].title %> </strong></h5>
+                                            <div class="row justify-content-center">
+                                                <p id="precio-producto" class="card-text pl-2 mt-2"><i class="fas fa-money-bill-alt mr-1"></i><strong>$<%= toThousand(cart[i].productos[j].price) %> </strong></p>
+                                            </div>
+                                            <p id="cantidad" class="card-text pl-2"><i class="fas fa-minus mr-1"></i> x1<i class="fas fa-plus ml-1"></i></p>
+                                            <form action="/carrito/borrar" method="POST">
+                                                <input type="hidden" name="productId" value="<%= cart[i].productos[j].id %>">
+                                                <button id="eliminar" type="submit" class="btn btn-info float-right mb-2 rounded-pill"><i class="fas fa-trash-alt mr-1"></i>Eliminar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        <% } %>
+                    <% } %>
+                </div>
+                    <div class="col-xl-4 col-lg-4 col-md-11 col-sm-11 col-xs-11 mx-1">
+                        <section id="resumen-productos" class="d-flex flex-column justify-content-center">
+                            <div class="container">
+                                <div class="card bg-light shadow-sm">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center"><strong>Resumen de Compra</strong></h5>
+                                        <% for( let i = 0; i < cart.length; i++ ) { %>
+                                            <% for( let j = 0; j < cart[i].productos.length; j++ ) { %>
+                                            <article class="d-flex flex-row justify-content-between">
+                                                <p class="card-text"><%= cart[i].productos[j].title %>  x1</p>
+                                                <p class="card-text">$<%= toThousand(cart[i].productos[j].price) %> </p>
+                                            </article>
+                                            <% } %>
+                                        <% } %>
+                                        <article id="precio-total" class="d-flex flex-row justify-content-between border-top pt-3">
+                                        <p class="card-text"><strong>Precio Total</strong></p>
+                                        <p class="card-text"><strong>$<%= toThousand(total) %></strong></p>
+                                    </article>
+                                        <div class="text-center">
+                                            <p id="continuar" class="text-center text-black-50"><a href="/" class="text-reset text-decoration-none">Continuar comprando</a></p>
+                                        </div>
+                                        <form id="btn-finalizar" class="text-center" action="/carrito/compra" method="POST">
+                                            <button type="submit" class="btn btn-primary btn-block rounded-pill text-center">FINALIZAR COMPRA</button>
+                                         </form>
+                                    </div>
+                                </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<% } else { %>
+    <div class="container-fluid">
+        <div id="separador"></div>
+        <div class="col-12">
+            <div class="text-center mb-3 mt-3"><img class="mb-2" id="img-carrito-vacio" src="https://www.flaticon.es/svg/vstatic/svg/34/34611.svg?token=exp=1620677038~hmac=2f34a20e2a874fd8ae22e4612b105677" width="10%" alt="Carrito Vacio"></div>
+            
+           <h2 class="text-center mt-2">¡Tu Carrito está vacío!</h2>
+           <p class="text-center">Podés recorrer las diferentes categorías y encontrar el regalo que buscás.</p>
+           <div class="text-center mt-2"><a href="/"><button id="botonVolver" type="submit" class="mt-2 btn btn-info btn-lg rounded-pill">Volver al Inicio</button></a></div>
+           
+        </div>
+</div>
+<% }  %>
+    <%- include('./partials/footer')  %>
+</body>
+
+</html>

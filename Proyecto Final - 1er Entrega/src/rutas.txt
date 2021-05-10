@@ -1,0 +1,25 @@
+<--- INDEX --->
+http://localhost:8080/
+
+<--- VER TODOS LOS PRODUCTOS --->
+http://localhost:8080/productos
+
+<--- BUSCAR PRODUCTOS POR ID --->
+http://localhost:8080/productos/ID
+
+<--- CREAR PRODUCTOS --->
+http://localhost:8080/productos
+Json Ejemplo para postman
+ {
+  "sku": "PVMGF1650",
+  "title": "Msi Nvidia Gtx 1650",
+  "price": 58900,
+  "qty": 10,
+  "thumbnail": "https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_20602_Placa_de_Video_MSI_GeForce_GTX_1650_4GB_GDDR6_Ventus_XS_0f5fa514-grn.jpg",
+  "description": "Con una velocidad de memoria de 8000 MHz los datos del procesador central se van a traducir en información comprensible en tan solo un abrir y cerrar de ojos. Tu placa de video decodificará tantos ciclos por segundo que hará más efectiva la transmisión de datos a otros componentes. Con esta cualidad, el equipo ganará agilidad y eficiencia."
+ }
+<--- EDITAR PRODUCTOS --->
+http://localhost:8080/productos/edit/ID
+
+ <--- BORRAR PRODUCTOS --->
+http://localhost:8080/productos/delete/ID

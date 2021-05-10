@@ -4,9 +4,6 @@ const port = 8080;
 const server = app.listen(port, () => {console.log(`Server initialized on port http://localhost:${server.address().port}`);});
 const path = require('path');
 
-const Products = require('./Productos');
-const newProduct = new Products(`productos.json`);
-const getProducts = newProduct.get();
 const productRoutes = require('./routes/products');
 const cartRoutes = require('./routes/cart');
 const methodOverride = require('method-override');

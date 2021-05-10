@@ -5,9 +5,27 @@ const newProduct = new Products(`productos.json`);
 const getProducts = newProduct.get();
 const toThousand = n =>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".");
 
+router.get('/search', (req, res) => {
+    if (typeof getProducts == 'string') {
+        let products = JSON.parse(getProducts);
+        let productId = req.query.search;
+        console.log(productId);
+        let product = [];
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].id == productId) {
+                product.push(products[i]);
+            };
+        };
+        res.render('../views/productDetail', {product, toThousand});
+    } else {
+        res.status(404).json({
+            error: 'no hay productos cargados'
+        });
+    };
+});
 router.get('/', (req, res) => {
     if (typeof getProducts == 'string') {
-        let products = JSON.parse(getProducts)
+        let products = JSON.parse(getProducts);
         res.render('../views/products', {products, toThousand});
     } else {
         res.status(404).json({
@@ -18,6 +36,15 @@ router.get('/', (req, res) => {
 
 router.get('/add', (req, res) => {
     res.render('../views/productAdd');
+});
+
+router.get('/administrar', (req, res) => {
+    let products = JSON.parse(getProducts);
+    res.render('../views/productsAdministration', {products, toThousand});
+});
+
+router.get('/buscar', (req, res) => {
+    res.render('../views/buscarPorId');
 });
 
 router.get('/edit/:id', (req, res) => {
@@ -46,7 +73,7 @@ router.post('/', (req, res) => {
     let thumbnail = req.body.thumbnail;
     let description = req.body.description;
     let postProduct = newProduct.post(sku, title, parseInt(price), parseInt(qty), thumbnail, description);
-    res.redirect('/')
+    res.redirect('/productos');
 });
 
 router.put('/edit/:id', (req, res) => {
@@ -62,7 +89,7 @@ router.put('/edit/:id', (req, res) => {
 });
 router.get('/delete/:id', (req, res) => {
     let productToDelete = newProduct.delete(parseInt(req.params.id));
-    res.redirect('/productos/vista');
+    res.redirect('/productos/administrar');
 });
 
 router.get('/:id', (req, res) => {
@@ -82,4 +109,5 @@ router.get('/:id', (req, res) => {
         });
     };
 });
+
 module.exports = router;
