@@ -55,11 +55,13 @@ class Carrito {
         let cartToKeep = [];
         for (let i = 0; i < parsedCart.length; i++) {
             for (let j = 0; j < parsedCart[i].productos.length; j++) {
-                cartToKeep = parsedCart[i].productos[j];
+                if (parsedCart[i].productos[j].id !== id) {
+                    cartToKeep.push(parsedCart[i].productos[j]);
+                }
             }
+            parsedCart[i].productos = cartToKeep
         }
-        console.log(cartToKeep);
-        // fs.writeFileSync('./carrito.json', JSON.stringify(cartToKeep, null, 1));
+        fs.writeFileSync('./carrito.json', JSON.stringify(parsedCart, null, 1));
     };
 };
 module.exports = Carrito;
