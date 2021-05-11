@@ -12,42 +12,14 @@ class Carrito {
             return [];
         };
     };
-    post(sku, title, price, qty, thumbnail, description) {
-        try {
-            let checkIfFileExists = this.get();
-            if (typeof checkIfFileExists == 'string') {
-
-                let parsedJSON = JSON.parse(checkIfFileExists);
-                let newProduct = {
-                    id: parsedJSON.length + 1,
-                    sku: sku,
-                    timestamp: new Date(),
-                    title: title,
-                    price: price,
-                    qty: qty,
-                    thumbnail: thumbnail,
-                    description: description
-                };
-                parsedJSON.push(newProduct);
-                fs.writeFileSync('./carrito.json', JSON.stringify(parsedJSON, null, 1));
-            } else {
-
-                let newFile = [{
-                    id: 1,
-                    sku: sku,
-                    timestamp: new Date().toLocaleTimeString(),
-                    title: title,
-                    price: price,
-                    qty: qty,
-                    description: description,
-                    thumbnail: thumbnail
-                }];
-
-                fs.writeFileSync('./carrito.json', JSON.stringify(newFile, null, 1));
-            };
-        } catch (err) {
-            console.log(err);
-        };
+    post(productArray) {
+        let cart = this.get();
+        let parsedCart = JSON.parse(cart);
+        let cartToKeep = productArray;
+        for (let i = 0; i < parsedCart.length; i++) {
+            parsedCart[i].productos.push(cartToKeep)
+        }
+        fs.writeFileSync('./carrito.json', JSON.stringify(parsedCart, null, 1));
     };
     delete(id) {
         let cart = this.get();

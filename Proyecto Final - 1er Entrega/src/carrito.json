@@ -1,25 +1,28 @@
-[{
-    "id": 1,
+[
+ {
+  "id": 1,
+  "timestamp": "2021-05-08T16:45:56.443Z",
+  "productos": [
+   {
+    "id": 4,
+    "sku": "kvxd",
     "timestamp": "2021-05-08T16:45:56.443Z",
-    "productos": [{
-            "id": 4,
-            "sku": "kvxd",
-            "timestamp": "2021-05-08T16:45:56.443Z",
-            "title": "Kolink Void X Dual",
-            "price": 10800,
-            "qty": 10,
-            "description": "La Void X tiene un llamativo panel frontal, con un par de paneles triangulares ARGB de espejo infinito, acentuados por un par de tiras de LED ARGB, lo que resulta en una caja estéticamente agradable. La Void X también tiene un impresionante soporte de hardware, incluyendo soporte de radiador dual, soporte de GPU vertical, soporte de placa base E-ATX y mucho más.",
-            "thumbnail": "https://kolink.eu/____impro/1/onewebmedia/Cases/VOID%20X/Optimerade%20bilder/GEKL_083_01-opti.jpg?etag=%22147e5-60621635%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=425%2B425&quality=85"
-        },
-        {
-            "id": 5,
-            "sku": "LGMPXC",
-            "timestamp": "2021-05-08T16:58:45.699Z",
-            "title": "Teclado Logitech Mecanico Pro X Clicky",
-            "price": 15999,
-            "qty": 10,
-            "description": "Diseñado en colaboración con profesionales de los deportes electrónicos para los más altos niveles de rendimiento, diseño compacto y elección de usuario intercambiable",
-            "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157519-450-450/920-009229.png?v=637344875559930000"
-        }
-    ]
-}]
+    "title": "Kolink Void X Dual",
+    "price": 10800,
+    "qty": 10,
+    "description": "La Void X tiene un llamativo panel frontal, con un par de paneles triangulares ARGB de espejo infinito, acentuados por un par de tiras de LED ARGB, lo que resulta en una caja estéticamente agradable. La Void X también tiene un impresionante soporte de hardware, incluyendo soporte de radiador dual, soporte de GPU vertical, soporte de placa base E-ATX y mucho más.",
+    "thumbnail": "https://kolink.eu/____impro/1/onewebmedia/Cases/VOID%20X/Optimerade%20bilder/GEKL_083_01-opti.jpg?etag=%22147e5-60621635%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=425%2B425&quality=85"
+   },
+   {
+    "id": 5,
+    "sku": "LGMPXC",
+    "timestamp": "2021-05-08T16:58:45.699Z",
+    "title": "Teclado Logitech Mecanico Pro X Clicky",
+    "price": 15999,
+    "qty": 10,
+    "description": "Diseñado en colaboración con profesionales de los deportes electrónicos para los más altos niveles de rendimiento, diseño compacto y elección de usuario intercambiable",
+    "thumbnail": "https://logitechar.vteximg.com.br/arquivos/ids/157519-450-450/920-009229.png?v=637344875559930000"
+   }
+  ]
+ }
+]
