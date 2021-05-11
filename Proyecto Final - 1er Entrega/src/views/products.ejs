@@ -18,7 +18,7 @@
             <% for( let i = 0; i < products.length; i++ ) { %>
                 <div class="col">
                     <div class="card h-100 border-white">
-                      <img src="<%= products[i].thumbnail %>" class="card-img-top" alt="...">
+                      <a href="/productos/<%= products[i].id %>""><img src="<%= products[i].thumbnail %>" class="card-img-top" alt="..."></a>
                       <div class="card-body">
                         <h5 class="card-title"><%= products[i].title %></h5>
                         <h6 class="card-title">$<%= toThousand(products[i].price)%></h5>

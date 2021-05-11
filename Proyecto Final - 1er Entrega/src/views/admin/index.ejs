@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="http://simpleicon.com/wp-content/uploads/Code-Optimization-2.png">
+    <link rel="stylesheet" href="/productDetail.css">
+    <link rel="stylesheet" href="/footer.css">
+    <title>Proyecto Final</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<%- include('../partials/adminHeader')  %>
+<body>
+    <section class="row mt-5">
+        <article id="tituloAdmin" class="col-12 card pt-5 border-0">
+            <div class="card-body">
+                <h2 class="card-title text-center">Administración de Productos</h2>
+            </div>
+        </article>
+    </section>
+    <div class="container">
+        <div id="adminProductos" class="row justify-content-md-center">
+            <div class="col text-center">
+                <div class="d-flex flex-column">
+                    <a class="text-decoration-none" href="/admin/productos/crear"><button type="button" class="text-secondary btn bg-info bg-gradient rounded-pill mb-3" id="botonComprar">CREAR</button></a>
+                    <a class="text-decoration-none" href="/admin/productos/listado"><button type="button" class="text-secondary btn bg-info bg-gradient rounded-pill mb-3" id="botonComprar">LISTAR</button></a>
+                </div>
+            </div>
+            <div class="container">
+                <section class="row">
+                    <article id="tituloAdmin" class="col-12 card border-0">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Administración de Usuarios</h2>
+                        </div>
+                    </article>
+                </section>
+                <div id="adminUsuarios" class="col-12 row justify-content-md-center">
+                    <div class="col text-center">
+                        <h4>Usuarios Administradores</h4>
+                        <div class="d-flex flex-column">
+                            <a class="text-decoration-none" href=""><button type="button" class="text-secondary btn bg-info bg-gradient rounded-pill mb-3" id="botonComprar">CREAR</button></a>
+                            <a class="text-decoration-none" href=""><button type="button" class="text-secondary btn bg-info bg-gradient rounded-pill mb-3" id="botonComprar">LISTAR</button></a>
+                        </div>
+                    </div>
+                    <div class="col text-center">
+                        <h4>Usuarios Web</h4>
+                        <div class="d-flex flex-column">
+                            <a class="text-decoration-none" href=""><button type="button" class="text-secondary btn bg-info bg-gradient rounded-pill mb-3" id="botonComprar">LISTAR</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

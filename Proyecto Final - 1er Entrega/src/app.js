@@ -6,6 +6,8 @@ const path = require('path');
 
 const productRoutes = require('./routes/products');
 const cartRoutes = require('./routes/cart');
+const adminRoutes = require('./routes/adminRoutes');
+
 const methodOverride = require('method-override');
 
 app.set('views', './views');
@@ -19,6 +21,8 @@ app.get('/', (req, res) => {
     res.render('../views/index');
 });
 
+
     
 app.use('/productos', productRoutes);
 app.use('/carrito', cartRoutes);
+app.use('/admin', adminRoutes);
