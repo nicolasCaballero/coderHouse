@@ -45,12 +45,12 @@ router.post('/agregar/:id', (req, res) => {
         };
     };
     newCart.post(product);
-    res.redirect('/carrito');
+    res.redirect('/carrito?from=cartsucces');
 });
 
 router.post('/borrar', (req, res) => {
     newCart.delete(parseInt(req.body.productId));
-    res.redirect('/carrito');
+    res.redirect('/carrito?from=cartdelete');
 });
 
 module.exports = router;
