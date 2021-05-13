@@ -1,0 +1,15 @@
+{
+  "name": "clase17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nicolasCaballero",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.95.5",
+    "mysql": "^2.18.1"
+  }
+}
