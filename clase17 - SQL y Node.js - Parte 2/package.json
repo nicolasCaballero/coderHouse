@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "start": "node src/main.js",
-    "startSQLite": "node src/mainConAsyncAwait.js"
+    "startSQLite": "node src/mainSQLlite.js"
   },
   "keywords": [],
   "author": "",

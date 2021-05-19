@@ -10,7 +10,7 @@ const mysql = {
 const sqlite3 = {
     client: 'sqlite3',
     connection: {
-        filename: './database/db.sqlite3'
+        filename: '.mainSQLlite'
     },
     useNullAsDefault: true
 }
